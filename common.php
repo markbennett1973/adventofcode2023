@@ -20,7 +20,7 @@ function getInput(bool $removeBlankLines = true): array
 }
 
 /**
- * Read the input.txt file and return as a 2-dimensional array of integers
+ * Read the input.txt file and return as a 2-dimensional array
  * @return array
  */
 function getInputMap(): array
@@ -34,9 +34,7 @@ function getInputMap(): array
 
     $map = [];
     foreach ($lines as $line) {
-        $map[] = array_map(function ($cell) {
-            return (int) $cell;
-        }, str_split($line));
+        $map[] = str_split($line);
     }
 
     return $map;
